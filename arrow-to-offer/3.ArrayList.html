@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       function printListFromTailToHead(head) {
+            // write code here
+            var ArrayList = [];
+            var p = head;
+            while (p != null) {
+                ArrayList.unshift(p.val);
+                p = p.next;
+            }
+            return ArrayList;
+        }
+    </script>
+</body>
+</html>
+

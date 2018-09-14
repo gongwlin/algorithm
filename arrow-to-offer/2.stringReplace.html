@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 方1：正则匹配
+        function replaceSpace(str) {
+            if (!str) {
+                return '';
+            } else {
+                return str.replace(/\s/g, '%20');
+            }
+        }
+        
+        // 方2：字符串拼接
+        function replaceSpace(str) {
+                if (!str) {
+                    return '';
+                } else {
+                    let string="";
+                    for(let i=0;i<str.length;i++){
+                        if(str[i]===' '){
+                            string+="%20"
+                        }else{
+                            string+=str[i];
+                        }
+                    }
+                    return string;
+                }
+        }
+        console.log(replaceSpace("Hello        world!"));
+
+    </script>
+</body>
+</html>
